@@ -2,19 +2,7 @@
 
 //client side javascript
 
-/*
-var ConnectToOMDB = function (){
-  $.ajax(
-  {
-    type: 'GET',
-    url: 'http://www.omdbapi.com/?t=dark+Knight&y=&plot=short&r=json',
-    success : function(data){
-      console.log(data);
-    }
-  });
-  
-}
-*/
+
 //==========================================================
 //Use to display movie into html 
 //  IN    movieObject - movieObject only that is formatted
@@ -210,7 +198,7 @@ $(function(){
 	});
 
 	$('.login').click(function () {
-    $('.login_modal').modal('show');
+    $('.login_modal').modal('show')
 	});
 
 	$('.addmovie_button').click(function () {

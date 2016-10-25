@@ -52,6 +52,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use("/", express.static("public"));
 
+/*
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -59,7 +60,7 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
 });
-
+*/
 console.log('server side, listening at port 3000');
 app.post('/signup', function(req, res){
 	console.log('inside post method');
