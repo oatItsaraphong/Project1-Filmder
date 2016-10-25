@@ -48,12 +48,19 @@ var AddMovieToHtml= function(movieObject){
     '<div id="VoteResult">' +
     '<div class="ui buttons">' + 
           '<div id="VoteDown" class="ui huge aligned fluid negative button" >'+
-          '<i class="large thumbs down icon"></i>Garbage</div>'+
-    '</div></div>'+
+          '<i class="large thumbs down icon"></i>Skip it</div>'+
+    '</div>' +
+    '<div class="ui buttons">' + 
+          '<div id="NeverSeen" class="ui huge aligned fluid violet button" >Haven\'t Seen'+
+          '<i class="large right arrow icon"></i></div>'+
+    '</div>' +
+    
+    
+    '</div>'+
     '</div></div></div>'
     );
     $('#ShowTitle').append('<div class="middle aligned center large black "><h1>'+ 
-          movieObject.mTitle + '</h1></div><br>'
+          movieObject.mTitle + '</h1>('+ movieObject.mYear +')</div><br>'
     );
 
     VoteButton(movieObject.movieName);
@@ -61,6 +68,8 @@ var AddMovieToHtml= function(movieObject){
 }
 
 var VoteButton = function(nameMovie){
+ 
+
   
   $('#VoteUp').click(function () {
     //console.log('TTTT 33' + nameMovie);
@@ -80,6 +89,11 @@ var VoteButton = function(nameMovie){
 
   $('.nextButton').click(function(){
   //console.log(nameMovie +'Next');
+    callShowAllMoviesFunction();
+  });
+  
+  $('#NeverSeen').click(function(){
+    //console.log("never");
     callShowAllMoviesFunction();
   });
 
