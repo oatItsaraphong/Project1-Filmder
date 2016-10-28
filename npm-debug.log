@@ -1,4 +1,4 @@
-0 info it worked if it ends with ok
+10 info it worked if it ends with ok
 1 verbose cli [ '/home/vagrant/n/bin/node',
 1 verbose cli   '/home/vagrant/n/bin/npm',
 1 verbose cli   'install' ]
